@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View posts</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <input type="hidden" id="id"> <!-- for postId -->
+        <header style="margin-top: -10px;">
+            <div class="container">
+                <div class="row d-flex justify-content-end mt-5">
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <button id="connect-wallet"
+                            class="btn btn-primary w-50 d-flex justify-content-center align-items-center">
+                            <span class="text-capitalize mb-0" id="text">Connect Wallet</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row mt-5" id="showPosts">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Modal Create Bid-->
+    <div class="modal fade" id="bidModal" tabindex="0" aria-labelledby="bidModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-3" id="bidModalLabel">Create Bid</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 row">
+                        <label for="addres-buyer" class="col-sm-3 col-form-label fs-4">Buyer's address </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control fs-5" id="addres-buyer" readonly>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="suggested-bid" class="col-sm-3 col-form-label fs-4">Suggested Bid </label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control text-muted fs-5" id="suggested-bid" min="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary fs-5" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="create-bid" class="btn btn-primary fs-5">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Modal Seller  -->
+ <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="modal " tabindex="-1" id="address-seller">
+                <div class="modal-dialog d-flex justify-content-center align-items-center">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <i class="bi bi-exclamation-triangle-fill fs-3 me-2 text-warning"></i>
+                            <h5 class="modal-title fs-3"> Message</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="fs-3">You are not seller.... </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
+    <script type="module" src="./js/viewPosts.js"></script>
+</body>
+
+</html>

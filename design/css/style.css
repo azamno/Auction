@@ -1,0 +1,110 @@
+/* =========== Css Reset ====================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========== Body ====================== */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+html {
+  font-size: 10px;
+}
+ /* ******************** Button to connect to the wallet *****************  */
+
+#connect-wallet {
+  padding:1rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 32px;
+  border: 0;
+  color: #fff;
+  
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#connect-wallet:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000)!important;
+}
+
+#btn-create-post:hover,#viewPosts:hover {
+  background-color: #313b5e;
+}
+
+
+ /* ********************  Text animation *****************  */
+.font-title{
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 300%;
+  font-size: 3.9rem;
+  font-family: sans-serif;
+  letter-spacing: .313rem;
+  font-weight: 600;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+      background-position: 0%;
+  }
+
+  100% {
+      background-position: 400%;
+  }
+}
+
+ /* ******************** Button Create post & View post *****************  */
+
+#btn-create-post:hover,#viewPosts:hover {
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+}
+
+/* ===========  Loading  ==================== */
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.445);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+.containerCover{
+  visibility: none;
+}
+
+/* ===========  page-viewPost.html  ==================== */
+.card-shadow{
+  box-shadow:0px 2px 14px 3px #ccc !important; 
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction house platform</title>
+    <link rel="stylesheet" href="./design/css/all.min.css">
+    <link rel="stylesheet" href="./design/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./design/css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <div class="row d-flex justify-content-end mt-5">
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <button id="connect-wallet"
+                            class="btn btn-primary w-50 d-flex justify-content-center align-items-center">
+                            <span class="text-capitalize mb-0" id="text">Connect Wallet</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 id="message"></h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center">
+                            <h1 class="font-title">Auction house platform</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-center  mt-5">
+                            <img class="rounded" src="./design/image/home.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-center mt-5">
+                            <button type="button" id="btn-create-post"
+                                class="btn btn-primary me-5 btn-lg w-md-25 py-lg-3 px-lg-4">
+                                <a href="#" class="text-white fs-2">Create
+                                    Post</a>
+                            </button>
+                            <button type="button" id="viewPosts" class="btn btn-primary btn-lg w-md-25 py-lg-3">
+                                <a href="./design/viewPost.html" target="_blank" class="text-white fs-2"> View The
+                                    Posts</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+
+
+
+    <!-- Modal Create Post-->
+    <div class="modal fade " id="post-modal" tabindex="0" aria-labelledby="postModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-3" id="postModalLabel">Create Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4 px-4">
+                    <div class="mb-4 row d-flex justify-content-center align-items-center">
+                        <label for="inputSellerAddress" class="col-sm-3 col-form-label fs-4">Seller's address </label>
+                        <div class="col-sm-9 ">
+                            <input type="text" class="form-control text-muted p-3 fs-5" id="seller-address" readonly>
+                        </div>
+                    </div>
+                    <div class="mb-4 row d-flex justify-content-center align-items-center">
+                        <label for="name-post" class="col-sm-3 col-form-label fs-4">Name Post </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control p-3" id="name-post">
+                        </div>
+                    </div>
+                    <div class="mb-4 row d-flex justify-content-center align-items-center ">
+                        <label for="min-bid" class="col-sm-3 col-form-label fs-4">Minimum Bid </label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control p-3" id="min-bid" min="0">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 row d-flex justify-content-center align-items-center ">
+                        <input type="file" id="upload-image">
+                    </div>
+                </div>
+                <div class="modal-footer py-3 px-4">
+                    <button type="button" class="btn btn-secondary px-4 py-2 me-3 fs-5"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="create-post-modal" class="btn btn-primary px-4 py-2 fs-5">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Connect to Metamask wallet  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="modal " tabindex="-1" id="Connect-metamask">
+                    <div class="modal-dialog d-flex justify-content-center align-items-center">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <i class="bi bi-exclamation-triangle-fill fs-3 me-2 text-warning"></i>
+                                <h5 class="modal-title fs-3"> Message</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="fs-3">Please Connect to Metamsk wallet </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./design/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="./node_modules/ipfs/dist/index.min.js"></script>
+    <script type="module" src="./design/js/main.js"></script>
+
+
+</body>
+
+</html>
