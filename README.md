@@ -19,4 +19,4 @@ npm install web3
 npm install ipfs
 ```
 
-
+https://github.com/azamno/Auction/assets/90998399/a164ef39-8034-4b55-a0a3-775734e26da1
